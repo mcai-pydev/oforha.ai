@@ -37,37 +37,124 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Validation
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// Form handling
+async function handleSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    try {
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+        };
         
-        // Basic form validation
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
+        // For now, we'll just log the form data
+        console.log('Form submission:', formData);
         
-        if (!name || !email || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
+        // Here you would typically send the data to your backend
+        // const response = await fetch('/api/contact', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(formData)
+        // });
         
-        if (!isValidEmail(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
+        // Simulate API call delay
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
-        // Here you would typically send the form data to your server
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
-    });
+        // Show success message
+        showNotification('Message sent successfully!', 'success');
+        
+        // Reset form
+        form.reset();
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        showNotification('Failed to send message. Please try again.', 'error');
+    } finally {
+        // Re-enable button and restore original text
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    }
+    
+    return false;
 }
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+// Notification system
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        <span>${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 100);
+    
+    // Remove notification after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 }
+
+// Add notification styles
+const style = document.createElement('style');
+style.textContent = `
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        background: white;
+        color: #333;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transform: translateX(120%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .notification.show {
+        transform: translateX(0);
+    }
+    
+    .notification.success {
+        border-left: 4px solid #2ea44f;
+    }
+    
+    .notification.error {
+        border-left: 4px solid #cb2431;
+    }
+    
+    .notification i {
+        font-size: 1.2rem;
+    }
+    
+    .notification.success i {
+        color: #2ea44f;
+    }
+    
+    .notification.error i {
+        color: #cb2431;
+    }
+`;
+
+document.head.appendChild(style);
 
 // Intersection Observer for Fade-in Animations
 const observerOptions = {

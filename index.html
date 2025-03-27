@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empowering the future through innovative AI solutions and cutting-edge machine learning research at Oforha.ai">
+    <meta name="keywords" content="AI, artificial intelligence, machine learning, deep learning, neural networks, data science, research">
+    <meta name="author" content="Oforha.ai">
+    <meta property="og:title" content="Oforha.ai - Advanced AI Solutions">
+    <meta property="og:description" content="Empowering the future through innovative AI solutions and cutting-edge machine learning research">
+    <meta property="og:image" content="https://oforha.ai/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://oforha.ai">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Oforha.ai - Advanced AI Solutions</title>
     <style>
         :root {
@@ -11,6 +19,8 @@
             --dark: #24292e;
             --light: #f6f8fa;
             --text: #586069;
+            --gradient-start: #0a2540;
+            --gradient-end: #1a365d;
         }
 
         * {
@@ -28,7 +38,7 @@
 
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a2540 0%, #1a365d 100%);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
             color: white;
             display: flex;
             align-items: center;
@@ -101,45 +111,48 @@
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            margin-right: 1rem;
         }
 
         .btn-primary {
             background: var(--primary);
             color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .btn-primary:hover {
             background: #0255b8;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            border-color: #0255b8;
         }
 
         .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 1rem;
+            background: rgba(255,255,255,0.1);
         }
 
         .neural-network {
             position: absolute;
             top: 50%;
-            right: 0;
+            right: -10%;
             transform: translateY(-50%);
-            width: 50%;
-            height: 100%;
+            width: 60%;
+            height: 120%;
             opacity: 0.1;
+            pointer-events: none;
         }
 
         @media (max-width: 768px) {
@@ -149,8 +162,14 @@
             .hero p {
                 font-size: 1.2rem;
             }
+            .btn {
+                display: block;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
             .neural-network {
-                display: none;
+                width: 100%;
+                right: -50%;
             }
         }
     </style>
@@ -160,16 +179,20 @@
         <div class="container">
             <h1>Oforha.ai</h1>
             <p>Empowering the future through innovative AI solutions and cutting-edge machine learning research.</p>
-            <div class="buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
+            <div class="cta-buttons">
+                <a href="/projects" class="btn btn-primary">View Projects</a>
                 <a href="https://github.com/mcai-pydev" class="btn btn-outline">GitHub Profile</a>
             </div>
         </div>
         <svg class="neural-network" viewBox="0 0 200 200">
-            <!-- Neural network visualization will be added -->
-            <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="1"/>
-            <circle cx="100" cy="100" r="5" fill="white"/>
-            <!-- Add more network elements -->
+            <defs>
+                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="10" cy="10" r="1" fill="white"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5"/>
         </svg>
     </div>
 

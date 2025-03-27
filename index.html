@@ -3,214 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Empowering the future through innovative AI solutions and cutting-edge machine learning research at Oforha.ai">
-    <meta name="keywords" content="AI, artificial intelligence, machine learning, deep learning, neural networks, data science, research">
+    <title>Oforha.ai - AI Research & Development</title>
+    <meta name="description" content="Oforha.ai is a leading platform for AI research, development, and education. Explore our projects, research papers, and educational resources.">
+    <meta name="keywords" content="AI, machine learning, neural networks, research, education">
     <meta name="author" content="Oforha.ai">
-    <meta property="og:title" content="Oforha.ai - Advanced AI Solutions">
-    <meta property="og:description" content="Empowering the future through innovative AI solutions and cutting-edge machine learning research">
-    <meta property="og:image" content="https://oforha.ai/assets/images/og-image.jpg">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Oforha.ai - AI Research & Development">
+    <meta property="og:description" content="Explore cutting-edge AI research, projects, and educational resources at Oforha.ai">
+    <meta property="og:image" content="assets/images/og-image.jpg">
     <meta property="og:url" content="https://oforha.ai">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Oforha.ai - Advanced AI Solutions</title>
-    <style>
-        :root {
-            --primary: #0366d6;
-            --secondary: #2ea44f;
-            --dark: #24292e;
-            --light: #f6f8fa;
-            --text: #586069;
-            --gradient-start: #0a2540;
-            --gradient-end: #1a365d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-        }
-
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-        }
-
-        .projects {
-            padding: 4rem 0;
-        }
-
-        .projects h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--dark);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .project-card p {
-            color: var(--text);
-            margin-bottom: 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            margin-right: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .btn-primary:hover {
-            background: #0255b8;
-            border-color: #0255b8;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .neural-network {
-            position: absolute;
-            top: 50%;
-            right: -10%;
-            transform: translateY(-50%);
-            width: 60%;
-            height: 120%;
-            opacity: 0.1;
-            pointer-events: none;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .hero p {
-                font-size: 1.2rem;
-            }
-            .btn {
-                display: block;
-                margin-bottom: 1rem;
-                text-align: center;
-            }
-            .neural-network {
-                width: 100%;
-                right: -50%;
-            }
-        }
-    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="hero">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <h1>Oforha.ai</h1>
-            <p>Empowering the future through innovative AI solutions and cutting-edge machine learning research.</p>
-            <div class="cta-buttons">
-                <a href="/projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/mcai-pydev" class="btn btn-outline">GitHub Profile</a>
+            <div class="logo">
+                <a href="#home">Oforha.ai</a>
+            </div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#research">Research</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Advancing AI Research & Development</h1>
+                <p class="subtitle">Explore cutting-edge artificial intelligence projects, research papers, and educational resources.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                    <a href="#research" class="btn btn-outline">
+                        <i class="fas fa-book"></i>
+                        Read Research
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="neural-network-animation"></div>
             </div>
         </div>
-        <svg class="neural-network" viewBox="0 0 200 200">
-            <defs>
-                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <circle cx="10" cy="10" r="1" fill="white"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)"/>
-            <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="0.5"/>
-            <circle cx="100" cy="100" r="40" fill="none" stroke="white" stroke-width="0.5"/>
-        </svg>
-    </div>
+    </section>
 
-    <div class="projects" id="projects">
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Research</h3>
+                    <p>Pushing the boundaries of artificial intelligence through innovative research and development.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>Open Source</h3>
+                    <p>Contributing to the global AI community through open-source projects and collaborations.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>Providing comprehensive educational resources for learning and understanding AI concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>AI-ML-Insights</h3>
-                    <p>A comprehensive repository for diving deep into AI, Machine Learning, and Data Science. Features practical implementations and tutorials.</p>
-                    <div class="buttons">
-                        <a href="https://mcai-pydev.github.io/ai-ml-insights/" class="btn btn-primary">View Project</a>
-                        <a href="https://github.com/mcai-pydev/ai-ml-insights" class="btn btn-outline">Source Code</a>
+                    <div class="project-image">
+                        <img src="assets/images/projects/ai-ml-insights.jpg" alt="AI-ML-Insights Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-ML-Insights</h3>
+                        <p>A comprehensive platform for analyzing and visualizing machine learning models.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mcai-pydev/AI-ML-Insights" class="btn btn-primary">
+                                <i class="fab fa-github"></i>
+                                View Source
+                            </a>
+                            <a href="https://mcai-pydev.github.io/AI-ML-Insights/" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- More project cards can be added here -->
+                <!-- Add more project cards here -->
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2>Latest Research</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Advanced Neural Networks</h3>
+                    <p>Exploring novel architectures and training methods for deep learning models.</p>
+                    <a href="#" class="read-more">
+                        Read More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Add more research cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:contact@oforha.ai">contact@oforha.ai</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#projects">Projects</a>
+                    <a href="#research">Research</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">API</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Oforha.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html> 
